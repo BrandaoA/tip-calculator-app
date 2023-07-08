@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <title>Tip Calculator App</title>
+</head>
+<body>
+  <header>
+    <img src="images/logo.svg" alt="logo">
+  </header>
+  <main>
+    <div class="main-container">
+      <div class="container1">
+        <div class="bill">
+          <p>Bill</p> 
+          <input type="text" value="" placeholder="0" name="bill" id="bill">
+        </div>
+
+        <div class="tip">
+          <p>Select Tip %</p>
+          <div class="grid">
+            <input type="button" value="5" name="button" id="btn" class="btn">
+            <input type="button" value="10" name="button" id="btn" class="btn">
+            <input type="button" value="15" name="button" id="btn" class="btn">
+            <input type="button" value="25" name="button" id="btn" class="btn">
+            <input type="button" value="50" name="button" id="btn" class="btn">
+            <input type="text" value="" name="button" id="btn-custom" placeholder="Custom" class="btn">
+          </div>
+
+          <div class="num-peoples">
+            <div class="text">
+              <p>Number of People</p>
+              <p class="error-message">Can't be zero</p>
+            </div>
+            <input type="text" value="" placeholder="0" name="button" id="num-people">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container2">
+      <div class="tip-amount">
+        <p class="amount">Tip Amount <br> <span>/ person</span></p>
+        <p class="amount-value" id="tip-person">$0.00</p>
+      </div>
+
+      <div class="person">
+        <p class="amount">Total <br> <span>/ person</span></p>
+        <p class="amount-value" id="total-tip">$0.00</p>
+      </div>
+
+      <button class="reset">RESET</button>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

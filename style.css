@@ -1,0 +1,208 @@
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Space Mono", sans-serif;
+  font-size: 16px;
+  background-color: var(--light-grayish-cyan);
+}
+
+/*mobile view*/
+header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+header img {
+  align-self: center;
+  margin: 30px auto;
+}
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 2rem;
+}
+.container1{
+  width: 100%;
+}
+p {
+  color: var(--grayish-cyan);
+}
+.tip p{
+  margin-bottom: 15px;
+}
+#bill, #num-people {
+  width: 100%;
+  padding: 0.4rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--very-light-grayish-cyan);
+  margin-bottom: 20px;
+  color: var(--very-dark-cyan);
+  outline: none;
+  text-align: right;
+}
+.text {
+  display: flex;
+  justify-content: space-between;
+}
+/*error message*/
+.error-message {
+  color: orangered;
+  display: none;
+}
+.num-peoples.active #num-people {
+  border: 1px solid orangered;
+}
+/*end of the above error message*/
+
+#bill {
+  background-image: url(./images/icon-dollar.svg);
+  background-position: left;
+  background-size: 13px;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+#num-people {
+  background-image: url(./images/icon-person.svg);
+  background-position: left;
+  background-size: 13px;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 48% 48%;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+input {
+  font-size: 24px;
+  font-family: "Space Mono", sans-serif;
+}
+#btn {
+  color: var(--white);
+  background-color: var(--very-dark-cyan);
+  border: none;
+  padding: 0.7rem 0;
+  border-radius: 5px;
+}
+#btn:active {
+  background-color: var(--strong-cyan);
+}
+#btn-custom {
+  border: none;
+  border-radius: 5px;
+  background-color: var(--very-light-grayish-cyan);
+  outline: none;
+  text-align: right;
+  padding: 0 1.2rem;
+}
+#btn-custom::placeholder {
+  color: var(--dark-grayish-cyan);
+  padding-left: 1rem;
+}
+.container2 {
+  width: 100%;
+  border-radius: 15px;
+  background-color: var(--very-dark-cyan);
+  padding: 2.7rem 1.7rem 1.5rem;
+}
+.tip-amount, .person {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.amount-value {
+  font-size: 24px;
+  color: var(--strong-cyan);
+}
+.amount {
+  color: var(--white);
+}
+span {
+  color: var(--grayish-cyan);
+}
+.reset {
+  width: 100%;
+  padding: 0.5rem 0;
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+  font-size: 24px;
+  font-family: "Space Mono", sans-serif;
+  border: none;
+  border-radius: 5px;
+}
+
+/*responsive design */
+/*desktop from 100px and above*/
+@media only screen and (min-width: 1000px) {
+  body {
+    max-height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+  header{
+    margin: 100px 0;
+  }
+  main {
+    flex-direction: row;
+    width: 1000px;
+    border-radius: 15px;
+    justify-content: space-between;
+  }
+  .container1 {
+    width: 100%;
+  }
+  .container2 {
+    width: 47%;
+  }
+  .grid {
+    grid-template-columns: 31% 31% 31%;
+  }
+  .tip-amount, .person {
+    margin-bottom: 50px;
+  }
+  .reset {
+    margin-top: 60px;
+  }
+  .amount-value {
+    font-size: 40px;
+  }
+  #bill:hover,
+  #btn-custom:hover {
+    border: 1px solid var(--strong-cyan);
+  }
+  input:hover {
+    cursor: pointer;
+  }
+  #btn:active {
+    background-color: var(--strong-cyan);
+  }
+  .reset {
+    background-color: hsl(186, 14%, 43%, 0.4);
+  }
+  .reset:hover {
+    cursor: pointer;
+  }
+  .reset:active {
+    background-color: var(--strong-cyan);
+  }
+}
